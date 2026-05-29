@@ -1,0 +1,120 @@
+/* This is for every page in the website */
+
+
+/* This file contains default design of our Website keeping the font and nav design constant */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(15, 61, 122);
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f2efef;
+}
+
+.navlink ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navlink ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.navlink ul li a:hover {
+    color: #f2efef;
+    padding: 15px;
+    background-color: rgb(231, 76, 60);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    width: 80%;
+    margin: 40px auto;
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+}
+
+
+/* index.html */
+
+#welcome {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgb(11, 79, 138);
+}
+
+#features {
+    color: rgb(11, 79, 138);
+}
+
+#features h2 {
+    color: rgb(11, 79, 138);
+    text-align: center;
+}
+
+#features ul {
+    list-style: none;
+    justify-content: center;
+}
+
+#join {
+    text-align: center;
+    padding: 20px;
+    color: rgb(11, 79, 138);
+}
+
+.Sign-Up-Button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(231, 76, 60);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Sign-Up-Button:hover {
+    animation: pop 1s infinite;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+nav a:active {
+    background-color: rgb(231, 76, 60);
+}

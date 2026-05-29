@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <metadata>
+        <title>Richfield Connect | Feed</title>
+        <link rel="stylesheet" href="RichCon.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            /* Header & Post Design */
+            
+            .titleHd {
+                color: rgb(11, 79, 138);
+            }
+            /* Input Feed Design */
+            
+            #inputFeed {
+                max-width: 500px;
+                max-height: fit-content;
+                margin: 0 auto;
+                padding: 20px;
+                border: 4px solid #f9f9f9;
+                background-color: #f9f9f9;
+                border-top-color: rgb(231, 76, 60);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            textarea {
+                width: 400px;
+                max-height: fit-content;
+            }
+            
+            button {
+                padding: 8px 18px;
+                font-size: 18px;
+                background-color: rgb(231, 76, 60);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: rgb(192, 57, 43);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            /*Post Preview */
+            
+            #postPreview {
+                max-width: 500px;
+                max-height: fit-content;
+                margin: 0 auto;
+                padding: 20px;
+                border: 4px solid #dadada;
+                background-color: #dadada;
+                border-top-color: rgb(231, 76, 60);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                color: rgb(11, 79, 138);
+            }
+            
+            div {
+                display: flex;
+                gap: 15px;
+            }
+            
+            #userPost {
+                color: black;
+            }
+            /* Feed Animation */
+            
+            .likeAnimation {
+                transform: scale(1.2);
+                transition: 0.2s;
+            }
+            
+            .likeCountAnimation {
+                color: red;
+                font-weight: bold;
+            }
+            
+            #postPreview {
+                display: none;
+            }
+        </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <h1 class="logo">Richfield Connect</h1>
+
+        <nav class="navlink">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="signUp.html">Sign-Up</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Header of Feed Page-->
+    <section>
+        <h1 class="titleHd">Feed</h1>
+    </section>
+
+    <!--Feed post page, where users write what they want to-->
+    <section id="inputFeed">
+        <h2 class="titleHd">Whats on your mind?</h2>
+        <label for="feedInput" class="sr-only">Share your thoughts:</label><br></br>
+        <textarea id="feedInput" name="feedInput" title="Share your thoughts" placeholder="Type your update here..."></textarea>
+        <button id="postBtn" onclick="postFeed()">Post</button>
+    </section>
+
+    <!--Post Preview, shows what they posted-->
+    <section id="postPreview">
+        <div>
+            <h3 id="userName"></h3>
+            <h3 id="userStNo"></h3>
+        </div>
+        <p id="userPost"></p>
+        <button id="likeBtn" onclick="likePost()">👍 Like <span id="likeCount">0</span></button>
+        <button id="deleteBtn" onclick="deletePost()">Delete</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Richfield Connect. All rights reserved.</p>
+    </footer>
+    <script src="feedPage.js"></script>
+</body>
+
+</html>

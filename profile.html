@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <metadata>
+        <title>Richfield Connect | Profile</title>
+        <link rel="stylesheet" href="RichCon.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            #profileView {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 4px solid #f9f9f9;
+                background-color: #f9f9f9;
+                border-top-color: rgb(231, 76, 60);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            
+            #noProfileSection {
+                display: none;
+                text-align: center;
+            }
+        </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <h1 class="logo">Richfield Connect</h1>
+
+        <nav class="navlink">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="signUp.html">Sign-Up</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Profile View (Gives you a preview of your profile on our Website)-->
+    <section id="profileView">
+        <h2>Your Profile</h2>
+
+        <p>Email: <span id="profileEmail">---</span></p>
+        <p>Name: <span id="profileName">---</span></p>
+        <p>Password: <span id="profilePassword">---</span></p>
+        <p>Student Number: <span id="profileStNo">---</span></p>
+        <p>Campus: <span id="profileCampus">---</span></p>
+        <p>Interest: <span id="profileInterest">---</span></p>
+        <p>Bio: <span id="profileBio">---</span></p>
+    </section>
+
+    <!--No Profile Section (Displays if a profile has not been made yet)-->
+    <section id="noProfileSection">
+        <h2 id="noProfile"></h2>
+        <button onclick="window.location.href='signup.html'" class="Sign-Up-Button">Sign Up</button>
+        <!--button leads user to sign up page-->
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Richfield Connect. All rights reserved.</p>
+    </footer>
+    <script src="profilePage.js"></script>
+</body>
+
+</html>

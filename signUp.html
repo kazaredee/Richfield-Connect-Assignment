@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <metadata>
+        <title>Richfield Connect | Sign-Up</title>
+        <link rel="stylesheet" href="RichCon.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            input {
+                border-radius: 1cm;
+                border-style: solid;
+                border-color: rgb(11, 79, 138);
+            }
+            /* input space edit */
+            
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 4px solid #f9f9f9;
+                background-color: #f9f9f9;
+                border-top-color: rgb(231, 76, 60);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            /* Design of entire form */
+            
+            h2 {
+                margin-bottom: 20px;
+                color: rgb(11, 79, 138);
+                text-align: center;
+            }
+            
+            button {
+                padding: 10px 20px;
+                font-size: 18px;
+                background-color: rgb(231, 76, 60);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: rgb(192, 57, 43);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            select {
+                border-radius: 1cm;
+                border-style: solid;
+                border-color: rgb(11, 79, 138);
+            }
+            /* Design of select drop down */
+            
+            textarea {
+                border-style: solid;
+                border-color: rgb(11, 79, 138);
+            }
+            
+            #liveProfile {
+                max-width: 400px;
+                margin: 3% auto;
+                padding: 20px;
+                background-color: #dadada;
+                border: 4px solid #dadada;
+                border-top-color: rgb(192, 57, 43);
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: left;
+            }
+            /* for alert use (if user does not fill required info then these styles are used) check profile.js */
+            
+            #emptyName #emptyEmail #emptyPassword #emptyStNo #emptyCampus #emptyInterest #emptyBio {
+                color: red;
+                font-size: 14px;
+            }
+            
+            .errorText {
+                color: red;
+                font-size: 14px;
+            }
+            
+            .errorInput {
+                border: 2px solid red;
+                color: red;
+            }
+        </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <h1 class="logo">Richfield Connect</h1>
+
+        <nav class="navlink">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="signUp.html">Sign-Up</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Form/Sign-up sheet-->
+    <!--Where id is empty*Something* this is for alert purpose. If user inputs nothing those fields are used to alert user-->
+    <section id="sign-up">
+        <h2>Sign Up for Richfield Connect</h2>
+        <form id="myForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com"><br></br>
+            <p id="emptyEmail"></p>
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter name & surname"><br></br>
+            <p id="emptyName"></p>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" min="8"><br></br>
+            <p id="emptyPassword"></p>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword"><br></br>
+            <p id="emptyConfirmPassword"></p>
+
+            <label for="studentNumber">Student Number:</label>
+            <input type="number" id="studentNumber" name="studentNumber"><br></br>
+            <p id="emptyStNo"></p>
+
+            <label for="campus">Campus</label>
+            <select id="campus" name="campus">
+                <option value="">Select your campus</option>
+                <option>Cape Town Campus</option>
+                <option>Bryanston Campus</option>
+                <option>Umhlanga Campus</option>
+                <option>Musgrave Campus</option>
+                <option>Polokwane New Premium Campus</option>
+                <option>Newtown Junction Campus</option>
+                <option>Centurion Campus</option>
+                <option>Pretoria Campus</option>
+                </select><br></br>
+            <p id="emptyCampus"></p>
+
+            <label for="interests">Interests:</label>
+            <textarea id="interests" name="interests" placeholder="e.g., Sports, Music, reading, etc."></textarea><br></br>
+            <p id="emptyInterest"></p>
+
+            <label for="bio">Bio:</label>
+            <textarea id="Bio" name="Bio" placeholder="Tell us about yourself..."></textarea><br></br>
+            <p id="emptyBio"></p>
+
+            <button id="saveButton" type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <!--Live Profile View (Displays how user's information is saved on the system as they write)-->
+    <section id="liveProfile">
+
+        <h2 id="profile">Your Profile</h2>
+
+        <p>Email: <span id="yourEmail">----</span></p>
+        <p>Name: <span id="yourName">----</span></p>
+        <p>Password: <span id="yourPassword">----</span></p>
+        <p>Student Number: <span id="yourStNo">----</span></p>
+        <p>Campus: <span id="yourCampus">----</span></p>
+        <p>Interest: <span id="yourInterest">----</span></p>
+        <p>Bio: <span id="yourBio">----</span></p>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Richfield Connect. All rights reserved.</p>
+    </footer>
+    <script src="profile.js"></script>
+</body>
+
+</html>
